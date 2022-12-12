@@ -11,9 +11,10 @@ const Menu = () => {
             Geri
           </a>
         </li>
-        <li>
+
+        {/* <li>
           <a href="/">Home Page(test)</a>
-        </li>
+        </li> */}
         <li>
           <Link to="/">Home Page</Link>
         </li>
