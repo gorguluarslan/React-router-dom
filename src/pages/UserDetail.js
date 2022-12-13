@@ -1,11 +1,24 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 function UserDetail() {
-  const params = useParams();
+  const { id } = useParams();
+  const [user, setUser] = useState(null);
 
-  console.log(params);
-  return <div>UserDetail</div>;
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+      .then((res) => res.json())
+      .then((data) => setUser(data));
+  }, [id]);
+
+  return (
+    <div>
+      <h2>UserDetail</h2>
+      {user && <pre>{JSON.stringify(user, null, 2)}</pre>}
+
+      <Link to={`/users/${Number(id) + 1}`}> Sonraki Kullanıcı</Link>
+    </div>
+  );
 }
 
 export default UserDetail;
