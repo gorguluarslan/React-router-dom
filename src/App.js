@@ -1,13 +1,16 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Users from "./pages/Users";
-import Contact from "./pages/Contact";
+
+//Pages
+import Home from "./pages/Dashboard/Home";
+import Users from "./pages/Dashboard/Users";
+import Contact from "./pages/Dashboard/Contact";
 import Menu from "./components/Menu";
-import UserDetail from "./pages/UserDetail";
-import Login from "./pages/Login";
-import DashboardLayout from "./layouts/DashboardLayout";
-import AuthLayout from "./layouts/AuthLayout";
+import UserDetail from "./pages/Dashboard/UserDetail";
+import Login from "./pages/Auth/Login";
+import DashboardLayout from "./layouts/Dashboard";
+import AuthLayout from "./layouts/Auth";
+import Register from "./pages/Auth/Register";
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
 
         <Route path="auth" element={<AuthLayout />}>
           <Route index element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
       </Routes>
     </BrowserRouter>
