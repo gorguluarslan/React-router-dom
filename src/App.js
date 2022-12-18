@@ -8,8 +8,8 @@ import Contact from "./pages/Dashboard/Contact";
 import Menu from "./components/Menu";
 import UserDetail from "./pages/Dashboard/UserDetail";
 import Login from "./pages/Auth/Login";
-import DashboardLayout from "./layouts/Dashboard";
-import AuthLayout from "./layouts/Auth";
+import DashboardLayout from "./layouts/layouts2/Dashboard";
+import AuthLayout from "./layouts/layouts 1/Auth";
 import Register from "./pages/Auth/Register";
 
 function App() {
