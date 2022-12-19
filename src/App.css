@@ -11,3 +11,14 @@ li {
   padding: 10px 0;
   column-gap: 10px;
 }
+.form > div {
+  margin-bottom: 10px;
+}
+
+.form > div > label {
+  display: block;
+}
+.form > div > input,
+textarea {
+  padding: 8px;
+}
