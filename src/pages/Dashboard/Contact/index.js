@@ -22,7 +22,14 @@ const Contact = () => {
     onSubmit: async (values, bag) => {
       await new Promise((r) => setTimeout(r, 1000));
 
+      if (values.email === "test@test.com") {
+        return bag.setErrors({
+          email: "Bu mail adresi zaten kullanılıyor.",
+          message: "Lütfen geçerli karakterler giriniz",
+        });
+      }
       console.log(values);
+
       bag.resetForm();
     },
     validationSchema,
